@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: PINK;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.app.controller.MainViewController">
+   <children>
+      <HBox layoutX="5.0" layoutY="67.0" prefHeight="35.0" prefWidth="200.0" spacing="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <TextField fx:id="txtSource" prefHeight="35.0" prefWidth="474.0" promptText="No File Has Been Selected" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnSource" mnemonicParsing="false" onAction="#btnSourceOnAction" onMouseEntered="#btnBrowseOnMouseEnetred" onMouseExited="#btnBrowseOnMouseExited" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: GREEN;" text="BROWSE" textFill="#e8e5e5" HBox.hgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="53.0" layoutY="22.0" prefHeight="30.0" text="Select the source file" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <HBox layoutX="5.0" layoutY="153.0" prefHeight="35.0" prefWidth="200.0" spacing="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <TextField fx:id="txtDestination" prefHeight="35.0" prefWidth="474.0" promptText="No File Has Been Selected" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnDestination" mnemonicParsing="false" onAction="#btnDestinationOnAction" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: GREEN;" text="BROWSE" textFill="#f8f4f4" HBox.hgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="32.0" layoutY="112.0" prefHeight="30.0" text="Select the destination file" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutY="210.0" prefHeight="35.0" prefWidth="343.0" spacing="20.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <Button fx:id="btnCopy" onAction="#btnCopyOnAction" opacity="0.78" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: BLUE;" text="_COPY" textFill="#e4dede" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="btnReset" onAction="#btnResetOnAction" opacity="0.78" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: RED;" text="_RESET" textFill="#e8e5e5" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
